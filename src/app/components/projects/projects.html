@@ -1,0 +1,61 @@
+<section class="py-5" id="projects" style="background: linear-gradient(135deg, #0b1d3a 0%, #18345f 100%);">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="display-4 fw-bold text-white mb-4">Projects</h2>
+      <div class="bg-warning mx-auto" style="width: 6rem; height: 0.25rem;"></div>
+    </div>
+
+    <div class="row g-4 justify-content-center">
+      <!-- Task Management Project Card -->
+      <div class="col-md-8 col-lg-6">
+        <div class="project-card p-4 rounded-4 h-100">
+          <!-- Project Name -->
+          <h3 class="h5 fw-semibold mb-2 text-white">Task Management System(WIP)</h3>
+
+          <!-- Project Description -->
+          <p class="text-white mb-3">
+            A web-based platform to manage, track, and assign tasks efficiently across teams.
+          </p>
+
+          <!-- Tech Stack Badges -->
+          <div class="mb-3">
+            <span class="badge bg-warning text-dark me-2 mb-2">C#</span>
+            <span class="badge bg-warning text-dark me-2 mb-2">.NET Core (Web API)</span>
+            <span class="badge bg-warning text-dark me-2 mb-2">SQL Server</span>
+            <span class="badge bg-warning text-dark me-2 mb-2">Angular</span>
+            <span class="badge bg-warning text-dark me-2 mb-2">Bootstrap</span>
+          </div>
+
+          <!-- Key Features -->
+          <ul class="text-white mb-0">
+            <li>Add, edit, assign, and track tasks</li>
+            <li>Email notifications on task assignment</li>
+            <li>Role-based access control (User & Admin)</li>
+            <li>Real-time status updates</li>
+            <li><strong>Secure JWT-based authentication</strong> for login and API access</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .project-card {
+    background: rgba(255,255,255,0.12);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255,255,255,0.18);
+    transition: transform 0.3s ease, background 0.3s ease;
+    padding: 1.5rem;
+  }
+
+  .project-card:hover {
+    transform: translateY(-5px);
+    background: rgba(255,255,255,0.2);
+  }
+
+  .badge {
+    font-weight: 600;
+    font-size: 0.85rem;
+  }
+</style>

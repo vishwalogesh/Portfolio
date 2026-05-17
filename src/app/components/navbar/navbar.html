@@ -1,0 +1,112 @@
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top"
+     style="background: linear-gradient(135deg, #0b1d3a 0%, #18345f 100%);">
+
+  <div class="container-fluid">
+
+    <!-- MOBILE TOP ROW -->
+    <div class="d-flex w-100 justify-content-between align-items-center d-lg-none">
+
+      <!-- Toggle -->
+      <button class="navbar-toggler" type="button"
+        (click)="toggleMobileMenu()"
+        [attr.aria-expanded]="isMobileMenuOpen()"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Resume (mobile) -->
+      <a href="/Vishwa Logesh S.pdf"
+         download
+         class="btn btn-warning text-dark fw-semibold px-3 rounded-pill">
+        Resume
+      </a>
+
+    </div>
+
+    <!-- DESKTOP NAVBAR -->
+    <div class="collapse navbar-collapse d-lg-flex justify-content-between w-100"
+         [class.show]="isMobileMenuOpen()"
+         id="navbarNav">
+
+      <!-- LEFT: Menu -->
+      <ul class="navbar-nav">
+        
+        <li class="nav-item">
+          <a class="nav-link"
+            [style.color]="activeSection() === 'hero' ? '#FFC107' : 'white'"
+            [style.fontWeight]="activeSection() === 'hero' ? '600' : '400'"
+            href="#hero"
+            (click)="setActiveSection('hero'); closeMobileMenu()">Home</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link"
+            [style.color]="activeSection() === 'about' ? '#FFC107' : 'white'"
+            [style.fontWeight]="activeSection() === 'about' ? '600' : '400'"
+            href="#about"
+            (click)="setActiveSection('about'); closeMobileMenu()">About</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link"
+            [style.color]="activeSection() === 'skills' ? '#FFC107' : 'white'"
+            [style.fontWeight]="activeSection() === 'skills' ? '600' : '400'"
+            href="#skills"
+            (click)="setActiveSection('skills'); closeMobileMenu()">Skills</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link"
+            [style.color]="activeSection() === 'projects' ? '#FFC107' : 'white'"
+            [style.fontWeight]="activeSection() === 'projects' ? '600' : '400'"
+            href="#projects"
+            (click)="setActiveSection('projects'); closeMobileMenu()">Projects</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link"
+            [style.color]="activeSection() === 'experience' ? '#FFC107' : 'white'"
+            [style.fontWeight]="activeSection() === 'experience' ? '600' : '400'"
+            href="#experience"
+            (click)="setActiveSection('experience'); closeMobileMenu()">Experience</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link"
+            [style.color]="activeSection() === 'education' ? '#FFC107' : 'white'"
+            [style.fontWeight]="activeSection() === 'education' ? '600' : '400'"
+            href="#education"
+            (click)="setActiveSection('education'); closeMobileMenu()">Education</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link"
+            [style.color]="activeSection() === 'certifications' ? '#FFC107' : 'white'"
+            [style.fontWeight]="activeSection() === 'certifications' ? '600' : '400'"
+            href="#certifications"
+            (click)="setActiveSection('certifications'); closeMobileMenu()">Certifications</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link"
+            [style.color]="activeSection() === 'contact' ? '#FFC107' : 'white'"
+            [style.fontWeight]="activeSection() === 'contact' ? '600' : '400'"
+            href="#contact"
+            (click)="setActiveSection('contact'); closeMobileMenu()">Contact</a>
+        </li>
+
+      </ul>
+
+      <!-- RIGHT: Resume (desktop only) -->
+      <div class="d-none d-lg-block">
+        <a href="/Vishwa Logesh S.pdf"
+           download
+           class="btn btn-warning text-dark fw-semibold px-4 rounded-pill">
+          Resume
+        </a>
+      </div>
+
+    </div>
+
+  </div>
+</nav>

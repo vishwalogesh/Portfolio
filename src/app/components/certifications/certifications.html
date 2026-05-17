@@ -1,0 +1,26 @@
+<section class="py-5" style="background: linear-gradient(135deg, #0b1d3a 0%, #18345f 100%);">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="display-4 fw-bold text-white mb-4">Certifications</h2>
+      <div class="bg-warning mx-auto" style="width: 6rem; height: 0.25rem;"></div>
+    </div>
+
+    <div class="row g-4 justify-content-center">
+      <div class="col-md-6 col-lg-4" *ngFor="let cert of certifications">
+        <div #certCard class="p-4 rounded-4 h-100 d-flex flex-column justify-content-between certification-card" 
+          style="background: rgba(255,255,255,0.12); backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,0.18);"
+          (mouseenter)="onCardHover(certCard, true)"
+          (mouseleave)="onCardHover(certCard, false)">
+          <div class="mb-3">
+            <h3 class="h5 fw-semibold text-white mb-2">{{ cert.title }}</h3>
+            <p class="text-warning fw-semibold mb-0">{{ cert.issuer }}</p>
+            <p class="text-light small mt-2">{{ cert.date }}</p>
+          </div>
+          <a [href]="cert.certificateUrl" target="_blank" class="btn btn-warning text-dark w-100 fw-semibold">
+            View Certificate
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
