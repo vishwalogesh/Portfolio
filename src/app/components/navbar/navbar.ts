@@ -1,4 +1,4 @@
-import { Component, signal, HostListener } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -7,13 +7,16 @@ import { CommonModule } from '@angular/common';
   imports: [CommonModule],
   templateUrl: './navbar.html',
   styleUrl: './navbar.scss',
+  host: {
+    '(window:scroll)': 'onWindowScroll()',
+  },
 })
 export class NavbarComponent {
   isMobileMenuOpen = signal(false);
   activeSection = signal('hero');
 
   toggleMobileMenu() {
-    this.isMobileMenuOpen.update(value => !value);
+    this.isMobileMenuOpen.update((value) => !value);
   }
 
   closeMobileMenu() {
@@ -24,9 +27,8 @@ export class NavbarComponent {
     this.activeSection.set(section);
   }
 
-  @HostListener('window:scroll', [])
   onWindowScroll() {
-    const sections = ['hero', 'about', 'skills','projects','experience','education', 'certifications', 'contact'];
+    const sections = ['hero', 'about', 'skills', 'projects', 'journey', 'contact'];
     for (const section of sections) {
       const element = document.getElementById(section);
       if (element) {

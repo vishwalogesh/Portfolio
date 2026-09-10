@@ -3,10 +3,8 @@ import { NavbarComponent } from './components/navbar/navbar';
 import { HeroComponent } from './components/hero/hero';
 import { AboutComponent } from './components/about/about';
 import { SkillsComponent } from './components/skills/skills';
-import { ProjectsComponent } from "./components/projects/projects"; 
-import { EducationComponent } from './components/education/education';
-import { CertificationsComponent } from './components/certifications/certifications';
-import { ExperienceComponent } from './components/experience/experience';
+import { ProjectsComponent } from './components/projects/projects';
+import { JourneyComponent } from './components/journey/journey';
 import { ContactComponent } from './components/contact/contact';
 import { FooterComponent } from './components/footer/footer';
 
@@ -19,14 +17,12 @@ import { FooterComponent } from './components/footer/footer';
     AboutComponent,
     SkillsComponent,
     ProjectsComponent,
-    EducationComponent,
-    CertificationsComponent,
-    ExperienceComponent,
+    JourneyComponent,
     ContactComponent,
-    FooterComponent
-],
+    FooterComponent,
+  ],
   templateUrl: './app.html',
-  styleUrl: './app.scss'
+  styleUrl: './app.scss',
 })
 export class App {
   protected readonly title = signal('Portfolio');

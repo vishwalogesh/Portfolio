@@ -1,0 +1,83 @@
+<section class="journey-section" id="journey" aria-labelledby="journey-heading">
+  <div class="container">
+    <header class="journey-header">
+      <p class="journey-kicker">My Path</p>
+      <h2 id="journey-heading">Journey</h2>
+      <div class="section-divider" aria-hidden="true"></div>
+    </header>
+
+    <div class="journey-legend" aria-label="Timeline legend">
+      <div class="journey-legend-item" *ngFor="let item of legend">
+        <span class="legend-dot legend-dot--{{ item.type }}" aria-hidden="true"></span>
+        <span>{{ item.label }}</span>
+      </div>
+    </div>
+
+    <div class="timeline" role="list" aria-label="Career timeline">
+      <article
+        #timelineItem
+        *ngFor="let entry of timelineEntries; let index = index"
+        class="timeline-item timeline-item--{{ entry.type }}"
+        [class.timeline-item--alt]="index % 2 !== 0"
+        [class.timeline-item--current]="entry.isCurrent"
+        role="listitem"
+      >
+        <div class="timeline-marker" aria-hidden="true">
+          <span class="timeline-dot timeline-dot--{{ entry.type }}"></span>
+        </div>
+
+        <div class="timeline-content">
+          <div class="timeline-date-row">
+            <span class="timeline-date">{{ entry.dateRange }}</span>
+            <span *ngIf="entry.isCurrent" class="timeline-present">Present</span>
+          </div>
+
+          <h3>{{ entry.title }}</h3>
+          <p class="timeline-organization">{{ entry.organization }}</p>
+
+          <p *ngIf="entry.description" class="timeline-description">
+            {{ entry.description }}
+          </p>
+
+          <ul *ngIf="entry.bullets?.length" class="timeline-bullets">
+            <li *ngFor="let bullet of entry.bullets">{{ bullet }}</li>
+          </ul>
+
+          <div *ngIf="entry.achievements?.length" class="timeline-achievements">
+            <div class="timeline-achievement-header">
+              <span class="achievement-badge" aria-hidden="true">★</span>
+              <span class="achievement-label">Achievements:</span>
+            </div>
+            <ul class="timeline-achievement-list">
+              <li *ngFor="let achievement of entry.achievements">{{ achievement }}</li>
+            </ul>
+          </div>
+
+          <div *ngIf="entry.certificates?.length" class="timeline-certificates" role="list" [attr.aria-label]="'Certificates for ' + entry.title">
+            <div class="timeline-certificate-header">
+              <span class="certificate-badge" aria-hidden="true">★</span>
+              <span class="certificate-label">Certificates:</span>
+            </div>
+            <ul class="timeline-certificate-list">
+              <li *ngFor="let certificate of entry.certificates">
+                <a
+                  *ngIf="certificate.url; else plainCertificateLink"
+                  [href]="certificate.url"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="View certificate for {{ certificate.name }}"
+                  class="certificate-link"
+                >
+                  {{ certificate.name }}, {{ certificate.issuer }}, {{ certificate.date }}
+                </a>
+                <ng-template #plainCertificateLink>
+                  <span>{{ certificate.name }}, {{ certificate.issuer }}, {{ certificate.date }}</span>
+                </ng-template>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
