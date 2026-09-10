@@ -40,7 +40,7 @@ export class PortfolioService {
       location: 'Tamil Nadu',
       email: 'svishwalogesh8888@gmail.com',
       phone: '9025881853',
-      summary: 'Full Stack .NET Developer with 2.5+ years of experience in .NET(Core & Framework), Angular, and SQL. Awarded Best Debutant for outstanding performance in initial projects.',
+      summary: 'Full Stack .NET Developer with 3+ years of experience in .NET(Core & Framework), Angular, and SQL. Awarded Best Debutant for outstanding performance in initial projects.',
       tagline: 'Building robust web applications with modern technologies'
     };
   }
