@@ -131,3 +131,4 @@ export class JourneyComponent implements AfterViewInit {
     this.timelineItems.forEach((item) => observer.observe(item.nativeElement));
   }
 }
+
