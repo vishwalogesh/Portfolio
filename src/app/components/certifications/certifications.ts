@@ -21,7 +21,7 @@ export class CertificationsComponent {
       title: '.NET Core Development',
       issuer: 'Udemy',
       date: 'Aug 2025',
-      certificateUrl: '/DotNet Core@udemy.pdf'
+      certificateUrl: '/DotNetCore@udemy.pdf'
     },
     {
       title: 'MySQL Database',
