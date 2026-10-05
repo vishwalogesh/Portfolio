@@ -56,7 +56,7 @@ export class JourneyComponent implements AfterViewInit {
           name: '.NET Core Development',
           issuer: 'Udemy',
           date: 'Aug 2025',
-          url: '/DotNet Core@udemy.pdf',
+          url: '/DotNet%20Core@udemy.pdf',
         },
       ],
       isCurrent: true,
