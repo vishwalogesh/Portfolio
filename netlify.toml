@@ -2,3 +2,6 @@
   base = "."
   command = "npm ci --include=dev && npm run build"
   publish = "dist/Portfolio/browser"
+
+[[plugins]]
+  package = "@netlify/angular-runtime"
