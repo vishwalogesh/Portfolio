@@ -16,8 +16,8 @@
             <p class="text-warning fw-semibold mb-0">{{ cert.issuer }}</p>
             <p class="text-light small mt-2">{{ cert.date }}</p>
           </div>
-          <a [href]="cert.certificateUrl" target="_blank" class="btn btn-warning text-dark w-100 fw-semibold">
-            View Certificate
+          <a [href]="cert.certificateUrl" download class="btn btn-warning text-dark w-100 fw-semibold">
+            Download Certificate
           </a>
         </div>
       </div>

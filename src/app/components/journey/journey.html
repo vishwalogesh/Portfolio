@@ -1,7 +1,7 @@
 <section class="journey-section" id="journey" aria-labelledby="journey-heading">
   <div class="container">
     <header class="journey-header">
-      <p class="journey-kicker">My Path</p>
+      <!-- <p class="journey-kicker">My Path</p> -->
       <h2 id="journey-heading">Journey</h2>
       <div class="section-divider" aria-hidden="true"></div>
     </header>
@@ -63,9 +63,8 @@
                 <a
                   *ngIf="certificate.url; else plainCertificateLink"
                   [href]="certificate.url"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="View certificate for {{ certificate.name }}"
+                  download
+                  aria-label="Download certificate for {{ certificate.name }}"
                   class="certificate-link"
                 >
                   {{ certificate.name }}, {{ certificate.issuer }}, {{ certificate.date }}
