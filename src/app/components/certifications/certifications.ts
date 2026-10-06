@@ -21,13 +21,13 @@ export class CertificationsComponent {
       title: '.NET Core Development',
       issuer: 'Udemy',
       date: 'Aug 2025',
-      certificateUrl: '/DotNet%20Core@udemy.pdf'
+      certificateUrl: '/DotNet-Core-Development.pdf'
     },
     {
       title: 'MySQL Database',
       issuer: 'Udemy',
       date: 'Jul 2022',
-      certificateUrl: '/SQL@udemy.pdf'
+      certificateUrl: '/MySQL-Database.pdf'
     }
   ];
 
