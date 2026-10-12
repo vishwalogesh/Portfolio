@@ -67,10 +67,10 @@
                   aria-label="Download certificate for {{ certificate.name }}"
                   class="certificate-link"
                 >
-                  {{ certificate.name }}, {{ certificate.issuer }}, {{ certificate.date }}
+                  {{ certificate.name }}, {{ certificate.issuer }}<span *ngIf="certificate.date">, {{ certificate.date }}</span>
                 </a>
                 <ng-template #plainCertificateLink>
-                  <span>{{ certificate.name }}, {{ certificate.issuer }}, {{ certificate.date }}</span>
+                  <span>{{ certificate.name }}, {{ certificate.issuer }}<span *ngIf="certificate.date">, {{ certificate.date }}</span></span>
                 </ng-template>
               </li>
             </ul>

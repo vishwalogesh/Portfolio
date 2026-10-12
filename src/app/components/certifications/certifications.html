@@ -14,7 +14,7 @@
           <div class="mb-3">
             <h3 class="h5 fw-semibold text-white mb-2">{{ cert.title }}</h3>
             <p class="text-warning fw-semibold mb-0">{{ cert.issuer }}</p>
-            <p class="text-light small mt-2">{{ cert.date }}</p>
+            <p *ngIf="cert.date" class="text-light small mt-2">{{ cert.date }}</p>
           </div>
           <a [href]="cert.certificateUrl" download class="btn btn-warning text-dark w-100 fw-semibold">
             Download Certificate
