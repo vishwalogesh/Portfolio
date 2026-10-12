@@ -4,7 +4,7 @@ import { CommonModule } from '@angular/common';
 export interface Certificate {
   name: string;
   issuer: string;
-  date: string;
+  date?: string;
   url?: string;
 }
 
@@ -52,6 +52,12 @@ export class JourneyComponent implements AfterViewInit {
         'Cash Award for outstanding contribution to project delivery and production support.',
       ],
       certificates: [
+        {
+          name: 'Azure Fundamentals (AZ-900)',
+          issuer: 'Microsoft',
+          date: 'Oct 2026',
+          url: '/Az900.pdf',
+        },
         {
           name: '.NET Core Development',
           issuer: 'Udemy',
@@ -131,4 +137,3 @@ export class JourneyComponent implements AfterViewInit {
     this.timelineItems.forEach((item) => observer.observe(item.nativeElement));
   }
 }
-

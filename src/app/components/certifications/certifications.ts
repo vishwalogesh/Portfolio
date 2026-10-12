@@ -4,7 +4,7 @@ import { CommonModule } from '@angular/common';
 interface Certification {
   title: string;
   issuer: string;
-  date: string;
+  date?: string;
   certificateUrl: string;
 }
 
@@ -17,6 +17,12 @@ interface Certification {
 })
 export class CertificationsComponent {
   certifications: Certification[] = [
+    {
+      title: 'Azure Fundamentals (AZ-900)',
+      issuer: 'Microsoft',
+      date: 'Oct 2026',
+      certificateUrl: '/Az900.pdf',
+    },
     {
       title: '.NET Core Development',
       issuer: 'Udemy',
